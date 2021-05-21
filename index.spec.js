@@ -1,16 +1,16 @@
 const maskWizard = require('./index')
 
 
-describe('time', () => {
+describe('interval', () => {
    it('is a function', function() {
-      expect(typeof maskWizard.time).toBe('function')
+      expect(typeof maskWizard.interval).toBe('function')
    })
 
-   it('mask time input', () => {
-      expect(maskWizard.time(1)).toBe('0h01m')
-      expect(maskWizard.time(13)).toBe('0h13m')
-      expect(maskWizard.time(131)).toBe('1h31m')
-      expect(maskWizard.time(1312)).toBe('13h12m')
+   it('mask interval input', () => {
+      expect(maskWizard.interval(1)).toBe('0h01m')
+      expect(maskWizard.interval(13)).toBe('0h13m')
+      expect(maskWizard.interval(131)).toBe('1h31m')
+      expect(maskWizard.interval(1312)).toBe('13h12m')
    })
 })
 

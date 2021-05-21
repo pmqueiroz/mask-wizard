@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true })
 
 const { onlyNumbers } = require('./src/lib/helpers')
 
-const time = (timeInput, maxLength) => {
+const interval = (timeInput, maxLength) => {
    const trimmedTime = onlyNumbers(timeInput).replace(/^0+(?!$)/, '')
 
    if (maxLength && maxLength < 5) {
@@ -28,7 +28,7 @@ const time = (timeInput, maxLength) => {
        return `${hours}h${minutes}m`
    }
 }
-exports.time = time
+exports.interval = interval
 
 const hour = (hourInput, complete, symbol  = ':') => {
 const regex = /(\d{2})(\d{2})/
