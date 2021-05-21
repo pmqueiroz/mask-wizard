@@ -5,7 +5,7 @@
    "license": "MIT",
    "repository": {
       "type":"git",
-      "url": "git+pmqueiroz/mask-wizard"
+      "url": "pmqueiroz/mask-wizard"
    },
    "bugs": "https://github.com/pmqueiroz/mask-wizard/issues",
    "homepage": "https://github.com/pmqueiroz/mask-wizard#readme",
