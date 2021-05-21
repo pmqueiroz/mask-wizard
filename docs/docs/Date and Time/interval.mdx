@@ -1,0 +1,34 @@
+---
+sidebar_position: 1
+---
+
+Return a *string* with format: 10h15m
+
+### Basic Usage
+
+```jsx
+const maskWizard = require("mask-wizard");
+
+// [...]
+
+function applyTimeMask(e) {
+  // the time() output in some value cases
+  // 1     OUTPUT 00h01m
+  // 10    OUTPUT 00h10m
+  // 101   OUTPUT 01h01m
+  // 1015  OUTPUT 10h15m
+  e.currentTarget.value = maskWizard.time.interval(e.currentTarget.value);
+}
+
+<input placeholder="Example" onChange={applyTimeMask} />;
+```
+
+### Parameters
+
+| Parameter Name | type   | required | default | description          |
+|----------------|--------|----------|---------|----------------------|
+| timeInput      | string | yes      | null    | string to be masked  |
+| maxLength      | number | no       | null    | maxLenght for return |
+
+
+
