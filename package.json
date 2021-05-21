@@ -30,6 +30,7 @@
       "index.js",
       "index.d.ts",
       "license",
+      "src",
       "src/lib"
    ],
    "devDependencies": {
