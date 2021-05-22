@@ -12,6 +12,9 @@ module.exports = {
   organizationName: 'pmqueiroz',
   projectName: 'mask-wizard',
   themeConfig: {
+   colorMode: {
+      defaultMode: 'dark'
+    },
     navbar: {
       title: MASK_WIZARD,
       logo: {
