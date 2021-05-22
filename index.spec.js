@@ -42,4 +42,8 @@ describe('hour', () => {
    it('mask hour input with a different symbol', () => {
       expect(maskWizard.time.hour('1155', null , '?')).toEqual('11?55')
    })
+
+   it('should limit if maxLength is provided', () => {
+      expect(maskWizard.time.hour('115567')).toEqual('11:55')
+   })
 })
