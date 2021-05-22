@@ -2,6 +2,9 @@
 sidebar_position: 1
 ---
 
+import { time } from 'mask-wizard'
+import { FiAlertTriangle } from 'react-icons/fi'
+
 Return a *string* with format: 10h15m
 
 ### Basic Usage
@@ -23,6 +26,18 @@ function applyTimeMask(e) {
 <input placeholder="Example" onChange={applyTimeMask} />;
 ```
 
+<div className="alert">
+<div className="alert-children">
+
+<FiAlertTriangle/>
+<h3>Alert</h3>
+
+</div>
+
+<span className="alert-children">That mask not allow backspace yet (feel free to open a pr if you want this fixed)</span>
+
+</div>
+
 ### Parameters
 
 | Parameter Name | type   | required | default | description          |
@@ -30,5 +45,10 @@ function applyTimeMask(e) {
 | timeInput      | string | yes      | null    | string to be masked  |
 | maxLength      | number | no       | null    | maxLenght for return |
 
+### Live Example
 
+export function applyTimeMask(e) {
+   e.currentTarget.value = time.interval(e.currentTarget.value)
+}
 
+<input placeholder="Eg. 10h15m" onChange={applyTimeMask}/>

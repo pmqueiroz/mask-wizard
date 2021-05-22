@@ -14,6 +14,7 @@
   --ifm-color-primary-light: #D5ACEC;
   --ifm-color-primary-lighter: #DDBCF0;
   --ifm-color-primary-lightest: #E6CDF4;
+  --ifm-color-alert: #FFBA00;
   --ifm-code-font-size: 95%;
 }
 
@@ -50,6 +51,27 @@ input::placeholder {
 
 .formContainer {
    display: flex;
+}
+
+.alert-children {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.alert-children svg{
+   font-size: 22px;
+}
+
+.alert-children h3{
+   margin: 0;
+   margin-left: 10px;
+}
+
+.alert {
+   color: var(--ifm-alert-color);
+   border: none;
+   background-color: var(--ifm-color-alert)
 }
 
 button {
