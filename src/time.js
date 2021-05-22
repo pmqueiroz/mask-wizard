@@ -1,10 +1,10 @@
 'use strict'
 Object.defineProperty(exports, "__esModule", { value: true })
 
-const { onlyNumbers } = require('./lib/helpers')
+const { onlyNumbers, trimToMaxLength, noLeadingZero } = require('./lib/helpers')
 
 const interval = (timeInput, maxLength) => {
-   const trimmedTime = onlyNumbers(timeInput).replace(/^0+(?!$)/, '')
+   const trimmedTime = noLeadingZero(onlyNumbers(timeInput))
 
    if (maxLength && maxLength < 5) {
       throw new Error('maxLength must be greater than or equal to 5')
@@ -31,7 +31,7 @@ const interval = (timeInput, maxLength) => {
 
 const hour = (hourInput, complete, symbol  = ':') => {
 const regex = /(\d{2})(\d{2})/
-   const trimmedHour = hourInput.replace(/\D/g, '')
+   const trimmedHour = trimToMaxLength(onlyNumbers(hourInput), 4)
 
    if (complete && trimmedHour.length < 4) {
       switch (trimmedHour.length) {
