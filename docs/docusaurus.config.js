@@ -13,7 +13,11 @@ module.exports = {
   projectName: 'mask-wizard',
   themeConfig: {
    colorMode: {
-      defaultMode: 'dark'
+      defaultMode: 'dark',
+      switchConfig: {
+         darkIcon: '😄',
+         lightIcon: '😕',
+       },
     },
     navbar: {
       title: MASK_WIZARD,
