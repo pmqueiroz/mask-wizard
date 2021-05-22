@@ -2,11 +2,23 @@
 sidebar_position: 2
 ---
 
+import { FiTerminal } from 'react-icons/fi'
+import { time } from 'mask-wizard'
+import react from 'react'
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Return a *string* with format: 10:15
 
 ### Basic Usage
 
-#### without complete
+<Tabs
+   defaultValue="without_complete"
+   values={[
+      {label: 'Without Complete', value: 'without_complete'},
+      {label: 'With Complete', value: 'with_complete'},
+]}>
+<TabItem value="without_complete">
 
 ```jsx
 const maskWizard = require("mask-wizard");
@@ -15,16 +27,18 @@ const maskWizard = require("mask-wizard");
 
 function applyTimeMask(e) {
    e.currentTarget.value = maskWizard.time.hour(e.currentTarget.value);
-  // the time() output in some value cases
-  // 1     OUTPUT 1
-  // 13    OUTPUT 13
-  // 130   OUTPUT 130
-  // 1300  OUTPUT 13:00
+   // the time() output in some value cases
+   // 1     OUTPUT 1
+   // 13    OUTPUT 13
+   // 130   OUTPUT 130
+   // 1300  OUTPUT 13:00
 }
 
 <input placeholder="Example" onChange={applyTimeMask} />;
 ```
-#### with complete
+
+</TabItem>
+<TabItem value="with_complete">
 
 ```jsx
 const maskWizard = require("mask-wizard");
@@ -33,11 +47,11 @@ const maskWizard = require("mask-wizard");
 
 function applyTimeMask(e, complete) {
    e.currentTarget.value = maskWizard.time.hour(e.currentTarget.value, complete);
-  // the time() output in some value cases
-  // 1     OUTPUT 01:00
-  // 13    OUTPUT 13:00
-  // 130   OUTPUT 13:00
-  // 1300  OUTPUT 13:00
+   // the time() output in some value cases
+   // 1     OUTPUT 01:00
+   // 13    OUTPUT 13:00
+   // 130   OUTPUT 13:00
+   // 1300  OUTPUT 13:00
 }
 
 <input 
@@ -47,11 +61,50 @@ function applyTimeMask(e, complete) {
 />;
 ```
 
+</TabItem>
+</Tabs>
+
 ### Parameters
 
 | Parameter Name | type   | required | default | description                           |
 |----------------|--------|----------|---------|---------------------------------------|
 | hourInput      | string | yes      | null    | string to be masked                   |
-| maxLength      | number | no       | null    | maxLenght for return                  |
+| maxLength      | number | no       | null    | maxLength for return                  |
 | symbol         | string | no       | ':'     | symbol to be between hour and minutes |
 
+### Live Example
+
+export function applyTimeMask(e, complete) {
+   e.currentTarget.value = time.hour(e.currentTarget.value, complete);
+}
+
+export const textInput = React.createRef();
+
+
+<Tabs
+   defaultValue="without_complete"
+   values={[
+      {label: 'Without Complete', value: 'without_complete'},
+      {label: 'With Complete', value: 'with_complete'},
+]}>
+<TabItem value="without_complete">
+
+<input placeholder="Eg. 10:15" onChange={applyTimeMask}/>
+
+</TabItem>
+<TabItem value="with_complete">
+
+<div className="formContainer">
+   <input className="succeed" ref={textInput} placeholder="Eg. 1" />
+
+   <button 
+      className="precede" 
+      onClick={() => {
+         textInput.current.value = time.hour(textInput.current.value, true)
+   }}>
+      <FiTerminal size="23"/>
+   </button>
+</div>
+
+</TabItem>
+</Tabs>

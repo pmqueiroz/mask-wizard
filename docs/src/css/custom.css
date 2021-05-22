@@ -14,6 +14,7 @@
   --ifm-color-primary-light: #D5ACEC;
   --ifm-color-primary-lighter: #DDBCF0;
   --ifm-color-primary-lightest: #E6CDF4;
+  --ifm-color-alert: #FFBA00;
   --ifm-code-font-size: 95%;
 }
 
@@ -22,4 +23,74 @@
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+input {
+   background: none;
+   border: 1px solid var(--ifm-color-primary);
+   width: 190px;
+   height: 40px;
+   border-radius: 6px;
+   padding-left: 10px;
+   color: var(--ifm-heading-color);
+   margin-bottom: 20px;
+}
+
+input::placeholder {
+   color: rgb(191, 199, 213);
+}
+
+.succeed {
+   border-radius: 6px 0 0 6px;
+   width: 150px;
+}
+
+.precede {
+   border-radius: 0 6px 6px 0;
+}
+
+.formContainer {
+   display: flex;
+}
+
+.alert-children {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.alert-children svg{
+   font-size: 22px;
+}
+
+.alert-children h3{
+   margin: 0;
+   margin-left: 10px;
+}
+
+.alert {
+   color: var(--ifm-alert-color);
+   border: none;
+   background-color: var(--ifm-color-alert)
+}
+
+button {
+   background: var(--ifm-color-primary);
+   border: none;
+   width: 40px;
+   height: 40px;
+   border-radius: 6px;
+   color: var(--ifm-heading-color);
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+button svg {
+   font-weight: 600;
+}
+
+input:active, input:focus {
+   outline: none;
 }
