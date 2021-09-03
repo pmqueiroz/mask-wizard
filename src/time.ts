@@ -1,9 +1,7 @@
-'use strict'
-Object.defineProperty(exports, "__esModule", { value: true })
 
-const { onlyNumbers, trimToMaxLength, noLeadingZero } = require('./lib/helpers')
+import { onlyNumbers, trimToMaxLength, noLeadingZero } from './lib/helpers'
 
-const interval = (timeInput, maxLength) => {
+const interval = (timeInput: string, maxLength: number) => {
    const trimmedTime = noLeadingZero(onlyNumbers(timeInput))
 
    if (maxLength && maxLength < 5) {
@@ -29,8 +27,8 @@ const interval = (timeInput, maxLength) => {
    }
 }
 
-const hour = (hourInput, complete, symbol  = ':') => {
-const regex = /(\d{2})(\d{2})/
+const hour = (hourInput: string, complete: boolean, symbol  = ':') => {
+   const regex = /(\d{2})(\d{2})/
    const trimmedHour = trimToMaxLength(onlyNumbers(hourInput), 4)
 
    if (complete && trimmedHour.length < 4) {
@@ -59,5 +57,7 @@ const regex = /(\d{2})(\d{2})/
    return `${Number(hour) > 23 ? '23' : hour}${symbol}${Number(minute) > 59 ? '59' : minute}`
 }
 
-exports.interval = interval
-exports.hour = hour
+export {
+   hour,
+   interval
+}

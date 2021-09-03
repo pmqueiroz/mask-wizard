@@ -1,4 +1,4 @@
-const maskWizard = require('./index')
+const maskWizard = require('./dist')
 
 
 describe('interval', () => {
