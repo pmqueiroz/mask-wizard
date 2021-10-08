@@ -9,6 +9,8 @@ body:
     options:
     - label: I've checked that there aren't [**other open issues**](https://github.com/pmqueiroz/mask-wizard/issues?q=is%3Aissue) on the same topic.
       required: true
+    - label: I want to work on this.
+      required: false
 - type: dropdown
   attributes:
     label: Node
