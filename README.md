@@ -8,7 +8,7 @@
 ### Basic Usage
 
 ```js
-const maskWizard = require("mask-wizard");
+const maskWizard = require("mask-wizard")
 
 //[...]
 
@@ -18,10 +18,10 @@ function applyTimeMask(e) {
   // 13    OUTPUT 00h13
   // 130   OUTPUT 01h30
   // 13000 OUTPUT 13h00
-  e.currentTarget.value = maskWizard.time.interval(e.currentTarget.value);
+  e.currentTarget.value = maskWizard.time.interval(e.currentTarget.value)
 }
 
-<input placeholder="Example" onChange={applyTimeMask} />;
+<input placeholder="Example" onChange={applyTimeMask} />
 ```
 
 ### Contributing

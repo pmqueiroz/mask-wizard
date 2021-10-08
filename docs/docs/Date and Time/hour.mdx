@@ -21,12 +21,12 @@ Return a *string* with format: 10:15
 <TabItem value="without_complete">
 
 ```jsx
-const maskWizard = require("mask-wizard");
+const maskWizard = require("mask-wizard")
 
 // [...]
 
 function applyTimeMask(e) {
-   e.currentTarget.value = maskWizard.time.hour(e.currentTarget.value);
+   e.currentTarget.value = maskWizard.time.hour(e.currentTarget.value)
    // the time() output in some value cases
    // 1     OUTPUT 1
    // 13    OUTPUT 13
@@ -34,19 +34,19 @@ function applyTimeMask(e) {
    // 1300  OUTPUT 13:00
 }
 
-<input placeholder="Example" onChange={applyTimeMask} />;
+<input placeholder="Example" onChange={applyTimeMask} />
 ```
 
 </TabItem>
 <TabItem value="with_complete">
 
 ```jsx
-const maskWizard = require("mask-wizard");
+const maskWizard = require("mask-wizard")
 
 // [...]
 
 function applyTimeMask(e, complete) {
-   e.currentTarget.value = maskWizard.time.hour(e.currentTarget.value, complete);
+   e.currentTarget.value = maskWizard.time.hour(e.currentTarget.value, complete)
    // the time() output in some value cases
    // 1     OUTPUT 01:00
    // 13    OUTPUT 13:00
@@ -58,7 +58,7 @@ function applyTimeMask(e, complete) {
    placeholder="Example" 
    onChange={applyTimeMask} 
    onBlur={(e) => applyTimeMask(e, true)} 
-/>;
+/>
 ```
 
 </TabItem>
@@ -75,10 +75,10 @@ function applyTimeMask(e, complete) {
 ### Live Example
 
 export function applyTimeMask(e, complete) {
-   e.currentTarget.value = time.hour(e.currentTarget.value, complete);
+   e.currentTarget.value = time.hour(e.currentTarget.value, complete)
 }
 
-export const textInput = React.createRef();
+export const textInput = React.createRef()
 
 
 <Tabs
