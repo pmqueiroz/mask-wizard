@@ -27,7 +27,7 @@ const interval = (timeInput: string, maxLength: number) => {
    }
 }
 
-const hour = (hourInput: string, complete: boolean, symbol  = ':') => {
+const hour = (hourInput: string, complete?: boolean, symbol  = ':') => {
    const regex = /(\d{2})(\d{2})/
    const trimmedHour = trimToMaxLength(onlyNumbers(hourInput), 4)
 
