@@ -1,0 +1,35 @@
+name: Bug report
+description: Something is not working or is going wrong
+labels: [ bug ]
+
+body:
+- type: checkboxes
+  attributes:
+    label: Preliminary checks
+    options:
+    - label: I've checked that there aren't [**other open issues**](https://github.com/pmqueiroz/mask-wizard/issues?q=is%3Aissue) on the same topic.
+      required: true
+- type: dropdown
+  attributes:
+    label: Node
+    description: Choose your node version
+    options:
+    - LTS
+    - Current
+    - '14'
+    - '13'
+    - '12'
+    - Other
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Describe the bug
+    placeholder: >
+      Clearly describes the problem
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional info
+    placeholder: Submit any additional info.
