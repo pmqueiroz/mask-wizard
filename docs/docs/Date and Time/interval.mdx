@@ -10,7 +10,7 @@ Return a *string* with format: 10h15m
 ### Basic Usage
 
 ```jsx
-const maskWizard = require("mask-wizard");
+const maskWizard = require("mask-wizard")
 
 // [...]
 
@@ -20,10 +20,10 @@ function applyTimeMask(e) {
   // 10    OUTPUT 00h10m
   // 101   OUTPUT 01h01m
   // 1015  OUTPUT 10h15m
-  e.currentTarget.value = maskWizard.time.interval(e.currentTarget.value);
+  e.currentTarget.value = maskWizard.time.interval(e.currentTarget.value)
 }
 
-<input placeholder="Example" onChange={applyTimeMask} />;
+<input placeholder="Example" onChange={applyTimeMask} />
 ```
 
 <div className="alert">

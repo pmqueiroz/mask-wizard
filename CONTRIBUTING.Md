@@ -27,3 +27,8 @@
 #### **Do you have questions about the source code?**
 
 * Ask any question in the issues section as well.
+
+### I'll you work on an issue?
+
+* Ensure that you followed our [code style guideline](https://github.com/pmqueiroz/mask-wizard/wiki/Code-Style-Guideline)
+* Read our [project structure guideline](https://github.com/pmqueiroz/mask-wizard/wiki/Project-Structure-Guideline)
