@@ -19,7 +19,6 @@
       "node": ">=10"
    },
    "scripts": {
-      "pretest": "yarn build",
       "test": "jest",
       "build": "rollup -c",
       "start": "rollup -c -w"
