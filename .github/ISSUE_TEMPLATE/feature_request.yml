@@ -1,0 +1,27 @@
+name: Feature request
+description: New feature, request or improvement
+labels: [ enhancement ]
+
+body:
+- type: checkboxes
+  attributes:
+    label: Preliminary checks
+    options:
+    - label: I've checked that there aren't [**other open issues**](https://github.com/pmqueiroz/mask-wizard/issues?q=is%3Aissue) on the same topic.
+      required: true
+- type: textarea
+  attributes:
+    label: Describe the problem requiring a solution
+    placeholder: Clearly describes the problem.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Describe the possible solution
+    placeholder: Provide a clear description of what you want to happen.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional info
+    placeholder: Submit any additional info.

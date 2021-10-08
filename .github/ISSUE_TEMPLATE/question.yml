@@ -1,0 +1,15 @@
+name: Question
+description: Ask a general question
+labels: [ question ]
+
+body:
+- type: textarea
+  attributes:
+    label: Your question
+    placeholder: Ask your question here.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional info
+    placeholder: Submit any additional info.
