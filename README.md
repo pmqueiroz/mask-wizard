@@ -26,7 +26,7 @@ function applyTimeMask(e) {
 
 ### Contributing
 
-You can simply contribute giving us a start on [github](https://github.com/pmqueiroz/mask-wizard) :D
+You can simply contribute giving us a star on [github](https://github.com/pmqueiroz/mask-wizard) :D
 
 If you want to contribute with the code feel free to open issues and fork the repository to create pull request following our [Contributing Guideline](https://github.com/pmqueiroz/mask-wizard/blob/master/CONTRIBUTING.Md) :D
 
