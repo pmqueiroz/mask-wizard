@@ -20,7 +20,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext()
 
   useREPL({
-     
+     initialValue: decodeURIComponent(window.location.hash)?.substring(1)
   })
 
   return (

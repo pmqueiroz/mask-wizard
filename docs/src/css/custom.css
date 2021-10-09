@@ -94,3 +94,361 @@ button svg {
 input:active, input:focus {
    outline: none;
 }
+
+/*
+ * CodeMirror
+ ============================================================================ */
+ @import 'codemirror/lib/codemirror.css';
+ @import 'codemirror/theme/dracula.css';
+ @import 'codemirror/addon/hint/show-hint.css';
+ 
+ /* Adapted from Normalize.css
+  ============================================================================ */
+ 
+ .repl *:not(class^='CodeMirror') {
+   box-sizing: border-box;
+ }
+ 
+ .repl {
+   box-sizing: border-box;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 14px;
+   line-height: 1.15;
+   background-color: #282a36;
+   position: relative;
+   flex-direction: column;
+   flex: 1 0 auto;
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+ }
+ 
+ .repl pre {
+   font-family: monospace, monospace;
+   font-size: 1em;
+ }
+ 
+ .repl button,
+ .repl input,
+ .repl textarea {
+   font-family: sans-serif;
+   font-size: 100%;
+   line-height: 1.15;
+ }
+ 
+ .repl button,
+ .repl input {
+   overflow: visible;
+ }
+ 
+ .repl button {
+   text-transform: none;
+ }
+ 
+ .repl button,
+ .repl [type="button"],
+ .repl [type="reset"] {
+   -webkit-appearance: button;
+ }
+ 
+ .repl button::-moz-focus-inner,
+ .repl [type="button"]::-moz-focus-inner,
+ .repl [type="reset"]::-moz-focus-inner {
+   border-style: none;
+   padding: 0;
+ }
+ 
+ .repl button:-moz-focusring,
+ .repl [type="button"]:-moz-focusring,
+ .repl [type="reset"]:-moz-focusring {
+   outline: 1px dotted ButtonText;
+ }
+ 
+ .repl textarea {
+   overflow: auto;
+ }
+ 
+ .repl ::-webkit-file-upload-button {
+   -webkit-appearance: button;
+   font: inherit;
+ }
+ 
+ /* Some CodeMirror overrides
+  ============================================================================ */
+ 
+ .repl .CodeMirror-hscrollbar {
+   display: none !important;
+ }
+ 
+ .repl .CodeMirror {
+   height: auto;
+   line-height: 1.5;
+ }
+
+
+/* Ramda REPL specific
+ ============================================================================ */
+
+.repl-panel-header {
+   background : #44475a;
+ }
+ 
+ .repl-title {
+   color: #f8f8f2;
+   font-weight: 800;
+   font-size: 1em;
+   line-height: 1.15;
+   padding: .5em .5em .4em 2em;
+   margin: 0;
+   display: inline-block;
+   text-transform: uppercase;
+ }
+ 
+ /* Input controls */
+ .repl-url-out {
+   background: #44475a;
+   color: #44475a;
+   border: none;
+   border-radius: 1px;
+   font-size: 1em;
+   vertical-align: middle;
+   padding: .2em;
+   outline: none;
+ }
+ 
+ .repl-url-out:valid {
+   background: #f8f8f2;
+ }
+ 
+ .repl-url-out:invalid {
+   visibility: hidden;
+ }
+ 
+ /* Loading state */
+ .repl textarea {
+ 
+   /*
+    * The following rules will interfere with CodeMirror:
+    * visibility: hidden;
+    * display: none;
+    */
+ 
+   resize: none;
+   background: #282a36;
+   border: transparent;
+ }
+ 
+ @keyframes repl-spin {
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+ 
+ .repl-spinner {
+   display: none;
+   width: 1em;
+   height: 1em;
+   border: 2px solid #fff;
+   border-radius: 0.5em;
+   position: absolute;
+   top: 0.5em;
+   right: 0.5em;
+   animation:repl-spin 500ms linear infinite;
+ }
+ 
+ .repl-spinner:before {
+   content: '';
+   display: block;
+   width: 0.25em;
+   height: 0.25em;
+   background: #282a36;
+ }
+ 
+ .repl-loading .repl-spinner {
+   display: block;
+ }
+ 
+ /* Output controls */
+ .repl-btn {
+   background-color: transparent;
+   border: 0;
+   color: #f8f8f2;
+   cursor: pointer;
+   font-weight: normal;
+   font-size: 1em;
+   flex: 0;
+   position: relative;
+   padding: .5em .5em .4em;
+ }
+ 
+ .repl-btn::after,
+ .repl-btn::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 1px;
+   background: #8be9fd;
+   opacity: 0;
+   transition: all 30ms ease-in-out;
+ }
+ 
+ 
+ .repl-btn:hover::after,
+ .repl-btn:focus::after {
+   height: 4px;
+   opacity: 1;
+ }
+ 
+ .repl-btn:focus {
+   outline: 5px auto -webkit-focus-ring-color;
+   outline-offset: -2px;
+ }
+ 
+ .repl-btn-danger:hover,
+ .repl-btn-danger:focus {
+   color: #ff5555;
+ }
+ 
+ .repl-btn-danger::after,
+ .repl-btn-danger::after {
+   background: #ff5555;
+ }
+ 
+ /* Feedback */
+ .repl-console-log,
+ .repl-error {
+   font-size: 0.93em;
+   margin: 0.5em 1em;
+   border: 0;
+   background: transparent;
+   padding: 0;
+ }
+ 
+ .repl-console-log:empty,
+ .repl-error:empty {
+   margin : 0;
+ }
+ 
+ .repl-console-log {
+   color: #6272a4;
+ }
+ 
+ .repl-error {
+   color: #ff5555;
+ }
+ 
+ /* Layout */
+ .repl {
+   height: 100%;
+   display: flex;
+ }
+ 
+ .repl-panels {
+   display: flex;
+   flex: 1 0 auto;
+   height : 100%;
+ }
+ 
+ .repl-panel {
+   flex: 1 0 auto;
+   display : flex;
+   width: 50%;
+   flex-direction: column;
+ }
+ 
+ .repl-panel-header {
+   flex: 0 1 auto;
+ }
+ 
+ .repl-panel-body {
+   overflow: auto;
+   flex: 1 1 auto;
+ }
+ 
+ .repl-panel--input .repl-panel-body {
+   display : flex;
+ }
+ 
+ .repl-panel--input .CodeMirror {
+   width: 100%;
+ }
+ 
+ .repl-panel--output .CodeMirror {
+   margin-left: 0.75em;
+ }
+ 
+ .repl-midline {
+   background-color: #44475a;
+   position: absolute;
+   left: 50%;
+   top: 0;
+   bottom: 0;
+   width: 2px;
+   z-index: 1;
+ }
+ 
+ .repl-icon {
+ 
+   font-family: sans-serif;
+   display: none;
+   width: 1em;
+   height: 1em;
+   border-radius: 0.5em;
+   top: 0.5em;
+   right: 0.5em;
+   position: absolute;
+   color: #f8f8f2; /* Dracula white */
+   text-align: center;
+   line-height: 1em;
+   font-style: normal;
+   cursor: default;
+ 
+ }
+ 
+ .repl-icon--danger {
+   background: #ff5555; /* Dracula red */
+ }
+ 
+ .repl-icon--warning {
+   background: #ffb86c; /* Dracula orange */
+   color: #44475a;      /* Dracula dark blue */
+ }
+ 
+ .repl--no-ramda .repl-icon--danger {
+   display: block;
+ }
+ 
+ .repl--missing-script .repl-icon--warning {
+   display: block;
+ }
+ 
+ /*
+  * Given a page less than 991px wide the panels will be stacked rather than
+  * positioned side-by-side
+  */
+ @media (max-width: 991px) {
+ 
+   .repl-midline {
+     display: none;
+   }
+ 
+   .repl-panels {
+     flex-direction: column;
+   }
+ 
+   .repl-panel {
+     width: 100%;
+     min-height: 0;
+   }
+ 
+   .repl-panel--input {
+     flex: 0 0 auto;
+   }
+ 
+   .repl-panel--output {
+     flex: 0 1 auto;
+   }
+ 
+ }
+ 
