@@ -5,11 +5,43 @@
  * and scoped locally.
  */
 
+ .container {
+   display: flex;
+   width: 100%;
+   margin-top: 0;
+   margin-left: 3rem;
+ }
+
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  background: var(--ifm-background-color-primary);
+  display: flex;
+  overflow: hidden; 
+  margin-top: 0;
+  height: 700px;
+}
+
+.container {
+  padding: 0;
+
+}
+
+.firstText {
+  color: var(--ifm-text-color-primary);
+  font: normal 700 60px Segoe UI;
+  padding-bottom: 0;
+  max-width: 600px;
   position: relative;
-  overflow: hidden;
+  background-color: transparent;
+}
+
+.secondText {
+  color: var(--ifm-text-color-secondary);
+  font: normal 400 24px Roboto;
+  padding-top: 1rem;
+  max-width: 500px;
+  padding-bottom:0; 
+  position: relative;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 966px) {
@@ -19,7 +51,121 @@
 }
 
 .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  width: 234px;
+  height: 70px;
+  background: var(--ifm-button-color);
+  border-radius: 10px;
+  font: normal 700 22px Segoe UI;
+  color: var(--ifm-text-color-lighter);
+  padding: 0;
+  margin-top: 2.1rem;
+}
+
+.imgContainer {
+  width: 50%;
+  padding-left: 150px;
+  position: relative;
+  background:transparent;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.decorationOne {
+  position: absolute;
+  width: 440px;
+  height: 144px;
+  left: 1072px;
+  top: 75px;
+  background: var(--ifm-decoration-color);
+  opacity: 0.85;
+  border-radius: 100px;
+}
+
+.decorationTwo {
+  position:absolute;
+  width: 222px;
+  height: 231px;
+  background: var(--ifm-decoration-color);
+  opacity: 0.85;
+  border-radius: 1000px;
+}
+
+.decorationThree {
+  position: absolute;
+  width: 384px;
+  height: 100px;
+  left: -163px;
+  top: 571px;
+  background: var(--ifm-decoration-color);
+  opacity: 0.85;
+  border-radius: 100px;
+}
+
+.decorationFour {
+  position: absolute;
+  width: 167px;
+  height: 164px;
+  left: 407px;
+  top: 700px;
+  background: var(--ifm-decoration-color);
+  opacity: 0.85;
+  border-radius: 1000px;
+}
+
+.decorationFive {
+  position:absolute;
+  width: 406px;
+  height: 398px;
+  left: 943px;
+  top: 389px;
+  background: var(--ifm-decoration-color);
+  opacity: 0.85;
+  border-radius: 1000px;
+}
+
+.firstSection {
+  background: var(--ifm-color-secondary);
+  text-align: center;
+  height: 688px;
+  padding-top: 4rem;
+  position: relative;
+}
+
+.firstBodyText {
+  color: var(--ifm-text-color-light);
+  font: normal 700 37px Segoe UI;
+  margin-bottom: 0;
+}
+
+.decorateBodyText {
+  color: var(--ifm-button-color);
+}
+
+.secondBodyText {
+  color: var(--ifm-text-color-lighter);
+  font: normal 400 24px Roboto;
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  .heroBanner, .contentTexts {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .decorationOne, .decorationFive {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .decorationFour {
+    display: none;
+
+  }
 }

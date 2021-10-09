@@ -1,3 +1,5 @@
+@import url(navbar.css);
+
 /* stylelint-disable docusaurus/copyright-header */
 /**
  * Any CSS included here will be global. The classic template
@@ -7,16 +9,30 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #CB97E7;
-  --ifm-color-primary-dark: #C58BE4;
-  --ifm-color-primary-darker: #BD7BE0;
-  --ifm-color-primary-darkest: #B46ADC;
-  --ifm-color-primary-light: #D5ACEC;
-  --ifm-color-primary-lighter: #DDBCF0;
-  --ifm-color-primary-lightest: #E6CDF4;
-  --ifm-color-alert: #FFBA00;
+   --ifm-color-primary: #CB97E7;
+   --ifm-background-color-primary: #FFFF;
+  --ifm-text-color-primary:#0A0A0A;
+  --ifm-text-color-secondary: #323232;
+  --ifm-button-color: #A477FE;
+  --ifm-decoration-color: #F7F7F7;
+  --ifm-color-secondary: #18191A;
+  --ifm-text-color-light: #FDFDFD;
+  --ifm-text-color-lighter: #FBFBFB;
+  --ifm-navbar-background-color: #FFFF;
+
+  --ifm-navbar-height: 85px;
   --ifm-code-font-size: 95%;
 }
+
+html[data-theme=dark] {
+   --ifm-background-color-primary: #242526;
+   --ifm-text-color-primary: #FDFDFD;
+   --ifm-text-color-secondary: #FBFBFB;
+   --ifm-decoration-color: #2C2D2D;
+   --ifm-navbar-background-color: #242526;
+   --ifm-navbar-link-color: #FBFBFB;
+} 
+
 
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
@@ -94,3 +110,4 @@ button svg {
 input:active, input:focus {
    outline: none;
 }
+
