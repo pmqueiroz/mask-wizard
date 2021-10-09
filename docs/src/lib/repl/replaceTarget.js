@@ -6,15 +6,20 @@ const handleHash = (source) => {
    window.location.hash = encodeURIComponent(source);
 }
 
-const compile = (input, output) => {
-   console.log('alo', input.getValue())
+const compile = async (input, output) => {
    if (!input) return
 
    const source = input.getValue()
 
    handleHash(source)
 
-   output.setValue(source)
+   const response = await fetch(`https://repl-server.herokuapp.com/?code=${encodeURIComponent(source)}`)
+   
+   const { data } = await response.json()
+
+   console.log(data)
+
+   output.setValue('output: ' + data)
 }
 
 export const replaceTarget = (
@@ -45,7 +50,7 @@ export const replaceTarget = (
 
    const debounceCompile = delay => debounce(compile, delay)
 
-   const onChange = debounceCompile(500);
+   const onChange = debounceCompile(700);
 
    bindedInput.on('change', () => onChange(bindedInput, bindedOutput, options))
 };
