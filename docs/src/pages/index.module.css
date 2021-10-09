@@ -60,6 +60,7 @@
   color: var(--ifm-text-color-lighter);
   padding: 0;
   margin-top: 2.1rem;
+  margin-left: 2rem;
 }
 
 .imgContainer {
@@ -152,8 +153,8 @@ img {
 }
 
 @media screen and (max-width: 400px) {
-  .heroBanner, .contentTexts {
-    text-align: center;
+  .heroBanner, .contentTexts {text-align: center;
+
   }
 }
 
