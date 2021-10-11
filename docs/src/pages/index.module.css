@@ -1,25 +1,175 @@
 /* stylelint-disable docusaurus/copyright-header */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /**
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 4rem 0;
+.firstSection {
+  background: var(--ifm-background-color-primary);
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:space-between;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  width:100%;
+  padding-left: 8rem;
+  height: 45rem;
+
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
+.featureTexts {
+  text-align: start;
+  margin-top: 6.7rem;
+  position: relative;
+
+}
+
+.row {
+  width: 100%;
+}
+
+.featureTitle {
+  color: var(--ifm-text-color-primary);
+  font: normal 700 3.75rem Segoe UI;
+  margin-bottom:0;
+}
+
+.featureDescription {
+  color: var(--ifm-text-color-secondary);
+  font: normal 400 1.5rem Roboto, sans-serif;
+  line-height: 28px;
+  max-width: 29rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.buttonStart {
+  margin-top: 2rem;
+  background: var(--ifm-button-color);
+  font: normal 700 1.3rem Segoe UI;
+  color: var(--ifm-text-color-lighter);
+  width: 15rem;
+  height: 4.3rem;
+  border-radius: 10px;
+  margin-right:0;
+}
+
+
+.bodyLink {
+  text-decoration: none;
+
+}
+
+svg {
+  max-width: 53rem;
+  height: 100%;
+}
+
+.featureImage {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 560px) {
+  .darkSection {
+    text-align: center;
+    flex-direction:column;
+  }
+  .featureImage {
+    order: 1;
+  }
+  .featureTexts {
+    order: 2;
+  }
+  svg {
+    width: 70%;
+
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.decorationOne {
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  left: 5.6rem;
+  top: 11.6rem;
+  border-radius:1000px;
+  background: var(--ifm-decoration-color);
+  opacity: 0.85;
+  overflow: hidden;
+}
+
+.decorationTwo {
+  position: absolute;
+  width: 24rem;
+  height: 6.2rem;
+  left: -10rem;
+  top: 35.6rem;
+  opacity: 0.85;
+  border-radius: 100px;
+  background: var(--ifm-decoration-color);
+  overflow: hidden;
+}
+
+.decorationThree {
+  position: absolute;
+  width: 10.4rem;
+  height: 10.2rem;
+  left: 25.4rem;
+  top: 51rem;
+  border-radius:1000px;
+  background: var(--ifm-decoration-color);
+  opacity: 0.85;
+  overflow: hidden;
+}
+
+.decorationFour {
+  position: absolute;
+  width: 24rem;
+  height: 9rem;
+  left: 67rem;
+  top: 3.8rem;
+  background: var(--ifm-decoration-color);
+  opacity: 0.85;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+
+.decorationFive {
+  position: absolute;
+  width: 25.3rem;
+  height: 24.8rem;
+  left: 59rem;
+  top: 24rem;
+  border-radius:1000px;
+  background: var(--ifm-decoration-color);
+  opacity: 0.85;
+  overflow: hidden;
+}
+
+.secondSection {
+  background-color: var(--ifm-color-secondary);  
+  position: relative;
+  height: 43rem;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.featureBodyTitle {
+  color: var(--ifm-text-color-light);
+  font: normal 700 37px Segoe UI;
+  margin-bottom: 0;
+}
+
+.decorateBodyText {
+  color: var(--ifm-button-color);
+}
+
+.featureBodyDescription {
+  color: var(--ifm-text-color-lighter);
+  font: normal 400 24px Roboto;
+  margin-top: 2rem;
 }

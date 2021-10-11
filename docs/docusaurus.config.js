@@ -23,7 +23,7 @@ module.exports = {
       title: MASK_WIZARD,
       logo: {
         alt: `${MASK_WIZARD} Logo`,
-        src: 'img/logo.svg',
+        src: 'img/logo-hero.svg',
       },
       items: [
         {
@@ -31,6 +31,7 @@ module.exports = {
           docId: 'Intro',
           position: 'left',
           label: 'Docs',
+          
         },
         {
           href: 'https://github.com/pmqueiroz/mask-wizard',
