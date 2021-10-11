@@ -23,7 +23,7 @@ module.exports = {
       title: MASK_WIZARD,
       logo: {
         alt: `${MASK_WIZARD} Logo`,
-        src: 'img/logoHero.svg',
+        src: 'img/logo-hero.svg',
       },
       items: [
         {

@@ -31,7 +31,7 @@ function HomepageHeader() {
         <div className={clsx('firstSection', styles.decorationThree)}/>
         <div className={clsx('firstSection', styles.decorationFour)}/>
         <div className={clsx('firstSection', styles.decorationFive)}/>
-          <div className="row">
+          <div className={clsx('row', styles.row)}>
             <Left/>
             <Right/>
         </div>

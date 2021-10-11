@@ -20,7 +20,7 @@
 }
 
 .navbar .navbar__items > .navbar__brand {
-    height: 3rem;
+    height: 2rem;
     margin: 0.6rem 0.6rem 0.6rem 1.5rem;
 }
 
@@ -64,4 +64,9 @@ body .react-toggle-thumb {
 
 .footer__copyright {
     color: var(--ifm-text-color-lighter);
+  }
+
+  .navbar logo {
+      width: 32px;
+      height: 32px;
   }

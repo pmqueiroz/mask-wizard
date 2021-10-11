@@ -24,6 +24,10 @@
 
 }
 
+.row {
+  width: 100%;
+}
+
 .featureTitle {
   color: var(--ifm-text-color-primary);
   font: normal 700 3.75rem Segoe UI;
@@ -71,7 +75,7 @@ svg {
 @media screen and (max-width: 560px) {
   .darkSection {
     text-align: center;
-    flex-direction:column
+    flex-direction:column;
   }
   .featureImage {
     order: 1;
@@ -132,6 +136,7 @@ svg {
   border-radius: 100px;
   overflow: hidden;
 }
+
 
 .decorationFive {
   position: absolute;
