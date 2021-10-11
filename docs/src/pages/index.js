@@ -3,53 +3,62 @@ import clsx from 'clsx'
 import Layout from '@theme/Layout'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import styles from './index.module.css'
-import logoHero from '../../static/img/logo-hero.png'
+import LogoHero from '../../static/img/LogoHero'
+
+export const Left = () => {
+  return (
+  <div className={clsx('col col--6', styles.featureTexts)}>
+    <h1 className={styles.featureTitle}>Mask Wizard</h1>
+    <p className={styles.featureDescription}>Simple usage string masking functions.</p>
+    <a href="/docs/Intro" className={styles.bodyLink}><button className={styles.buttonStart}>Get start</button></a>
+  </div>
+  )
+}
+
+export const Right = () => {
+  return(
+  <div className={clsx('col col--6', styles.featureImage)}>
+    <LogoHero/>
+  </div>
+  )
+}
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext()
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-     <div className={clsx('first--section', styles.container)}>
-       <div className={clsx('hero hero--primary', styles.decorationOne)}/>
-       <div className={clsx('hero hero--primary', styles.decorationTwo)}/>
-       <div className={clsx('hero hero--primary', styles.decorationThree)}/>
-       <div className={clsx('hero hero--primary', styles.decorationFour)}/>
-       <div className={clsx('hero hero--primary', styles.decorationFive)}/>
-
-        <div className={clsx('second--section', styles.contentTexts)}>
-          <h1 className={clsx('hero hero--primary', styles.firstText)}>Mask Wizard</h1>
-          <p className={clsx('hero hero--primary', styles.secondText)}>Simple usage string masking functions, checkout our documentation.</p>
-          <a href="/docs/Intro"><button className={clsx('hero hero--primary',styles.buttons)}>Get start</button></a>
+    return (
+      <section className={clsx('firstSection',styles.firstSection)}>
+        <div className={clsx('firstSection', styles.decorationOne)}/>
+        <div className={clsx('firstSection', styles.decorationTwo)}/>
+        <div className={clsx('firstSection', styles.decorationThree)}/>
+        <div className={clsx('firstSection', styles.decorationFour)}/>
+        <div className={clsx('firstSection', styles.decorationFive)}/>
+          <div className="row">
+            <Left/>
+            <Right/>
         </div>
-
-        <div className={clsx('hero hero--primary', styles.imgContainer)}>
-          <img src={logoHero}/>
-        </div>                   
-      </div>
-    </header>
-  )
-}
+      </section>
+    )
+  }
 
 function HomepageBody() {
-  const {siteConfig} = useDocusaurusContext()
-  return ( 
-    <section className={clsx('firstSection', styles.firstSection)}>
-    <div className="container">
-       <p className={clsx('firstSection', styles.firstBodyText)}>Simple usage string <span className={clsx('firstSection', styles.decorateBodyText)}>masking functions</span>, checkout our documentation.</p>
-       <p className={clsx('firstSection', styles.secondBodyText)}>Pellentesque sit amet facilisis nulla, nam tincidunt urna quis efficitur cursus. </p>
-       </div>
-</section>
-  )
-}
+  return(
+  <section className={styles.secondSection}>
+    <h3 className={styles.featureBodyTitle}>Checkout our <span className={clsx('secondSection', styles.decorateBodyText)}>documentation</span>.</h3>
+    <p className={styles.featureBodyDescription}>Get started with Mask Wizard.</p>
+  </section>
+    )
+  }
+
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext()
   return (
+    <>
     <Layout
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <HomepageBody/>
+        <HomepageHeader />
+        <HomepageBody/>
     </Layout>
+</>
   )
 }
