@@ -8,7 +8,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/logo-hero.ico',
+  favicon: 'img/favicon.ico',
   organizationName: 'pmqueiroz',
   projectName: 'mask-wizard',
   themeConfig: {
