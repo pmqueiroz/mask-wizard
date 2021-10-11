@@ -1,142 +1,159 @@
 /* stylelint-disable docusaurus/copyright-header */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /**
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
 
- .container {
-   display: flex;
-   width: 100%;
-   margin-top: 0;
-   margin-left: 3rem;
- }
-
-.heroBanner {
+.firstSection {
   background: var(--ifm-background-color-primary);
-  display: flex;
-  overflow: hidden; 
-  margin-top: 0;
-  height: 700px;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:space-between;
+  text-align: center;
+  width:100%;
+  padding-left: 8rem;
+  height: 45rem;
+
 }
 
-.container {
-  padding: 0;
+.featureTexts {
+  text-align: start;
+  margin-top: 6.7rem;
+  position: relative;
 
 }
 
-.firstText {
+.featureTitle {
   color: var(--ifm-text-color-primary);
-  font: normal 700 60px Segoe UI;
-  padding-bottom: 0;
-  max-width: 600px;
-  position: relative;
-  background-color: transparent;
+  font: normal 700 3.75rem Segoe UI;
+  margin-bottom:0;
 }
 
-.secondText {
+.featureDescription {
   color: var(--ifm-text-color-secondary);
-  font: normal 400 24px Roboto;
-  padding-top: 1rem;
-  max-width: 500px;
-  padding-bottom:0; 
-  position: relative;
-  background-color: transparent;
+  font: normal 400 1.5rem Roboto, sans-serif;
+  line-height: 28px;
+  max-width: 29rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
-  position: absolute;
-  width: 234px;
-  height: 70px;
+.buttonStart {
+  margin-top: 2rem;
   background: var(--ifm-button-color);
-  border-radius: 10px;
-  font: normal 700 22px Segoe UI;
+  font: normal 700 1.3rem Segoe UI;
   color: var(--ifm-text-color-lighter);
-  padding: 0;
-  margin-top: 2.1rem;
-  margin-left: 2rem;
+  width: 15rem;
+  height: 4.3rem;
+  border-radius: 10px;
+  margin-right:0;
 }
 
-.imgContainer {
-  width: 50%;
-  padding-left: 150px;
-  position: relative;
-  background:transparent;
+
+.bodyLink {
+  text-decoration: none;
+
 }
 
-img {
-  width: 100%;
+svg {
+  max-width: 53rem;
   height: 100%;
+}
+
+.featureImage {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 560px) {
+  .darkSection {
+    text-align: center;
+    flex-direction:column
+  }
+  .featureImage {
+    order: 1;
+  }
+  .featureTexts {
+    order: 2;
+  }
+  svg {
+    width: 70%;
+
+  }
 }
 
 .decorationOne {
   position: absolute;
-  width: 440px;
-  height: 144px;
-  left: 1072px;
-  top: 75px;
+  width: 14rem;
+  height: 14rem;
+  left: 5.6rem;
+  top: 11.6rem;
+  border-radius:1000px;
   background: var(--ifm-decoration-color);
   opacity: 0.85;
-  border-radius: 100px;
+  overflow: hidden;
 }
 
 .decorationTwo {
-  position:absolute;
-  width: 222px;
-  height: 231px;
-  background: var(--ifm-decoration-color);
+  position: absolute;
+  width: 24rem;
+  height: 6.2rem;
+  left: -10rem;
+  top: 35.6rem;
   opacity: 0.85;
-  border-radius: 1000px;
+  border-radius: 100px;
+  background: var(--ifm-decoration-color);
+  overflow: hidden;
 }
 
 .decorationThree {
   position: absolute;
-  width: 384px;
-  height: 100px;
-  left: -163px;
-  top: 571px;
+  width: 10.4rem;
+  height: 10.2rem;
+  left: 25.4rem;
+  top: 51rem;
+  border-radius:1000px;
   background: var(--ifm-decoration-color);
   opacity: 0.85;
-  border-radius: 100px;
+  overflow: hidden;
 }
 
 .decorationFour {
   position: absolute;
-  width: 167px;
-  height: 164px;
-  left: 407px;
-  top: 700px;
+  width: 24rem;
+  height: 9rem;
+  left: 67rem;
+  top: 3.8rem;
   background: var(--ifm-decoration-color);
   opacity: 0.85;
-  border-radius: 1000px;
+  border-radius: 100px;
+  overflow: hidden;
 }
 
 .decorationFive {
-  position:absolute;
-  width: 406px;
-  height: 398px;
-  left: 943px;
-  top: 389px;
+  position: absolute;
+  width: 25.3rem;
+  height: 24.8rem;
+  left: 59rem;
+  top: 24rem;
+  border-radius:1000px;
   background: var(--ifm-decoration-color);
   opacity: 0.85;
-  border-radius: 1000px;
+  overflow: hidden;
 }
 
-.firstSection {
-  background: var(--ifm-color-secondary);
-  text-align: center;
-  height: 688px;
-  padding-top: 4rem;
+.secondSection {
+  background-color: var(--ifm-color-secondary);  
   position: relative;
+  height: 43rem;
+  text-align: center;
+  padding-top: 4rem;
 }
 
-.firstBodyText {
+.featureBodyTitle {
   color: var(--ifm-text-color-light);
   font: normal 700 37px Segoe UI;
   margin-bottom: 0;
@@ -146,27 +163,8 @@ img {
   color: var(--ifm-button-color);
 }
 
-.secondBodyText {
+.featureBodyDescription {
   color: var(--ifm-text-color-lighter);
   font: normal 400 24px Roboto;
-  padding-top: 2rem;
-}
-
-@media screen and (max-width: 400px) {
-  .heroBanner, .contentTexts {text-align: center;
-
-  }
-}
-
-@media screen and (max-width: 1240px) {
-  .decorationOne, .decorationFive {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 560px) {
-  .decorationFour {
-    display: none;
-
-  }
+  margin-top: 2rem;
 }

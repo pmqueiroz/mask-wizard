@@ -19,7 +19,6 @@
   --ifm-text-color-light: #FDFDFD;
   --ifm-text-color-lighter: #FBFBFB;
   --ifm-navbar-background-color: #FFFF;
-
   --ifm-navbar-height: 85px;
   --ifm-code-font-size: 95%;
 }
@@ -101,6 +100,10 @@ button {
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+a {
+   text-decoration: none !important;
 }
 
 button svg {
