@@ -10,7 +10,8 @@ describe('Test masks', () => {
         ["# # /", "9", "9"],
         [". . /", "900", "9 0 /0"],
         [". . /", "89", "8 9"],
-        ["# # /", "89", "8 9"]
+        ["# # /", "89", "8 9"],
+        ["(..) .. ... ...", "9999999999", "(99) 99 999 999"]
     ])('test generic mast getting resolved', (mask, val, expectedVal) => {
         expect(maskWizard.masks.genericMask(mask, val)).toStrictEqual(expectedVal);
     })
