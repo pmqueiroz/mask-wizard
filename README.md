@@ -33,9 +33,9 @@ If you want to contribute with the code feel free to open issues and fork the re
 #### How to run locally
 
 * Run `yarn` to install all dependencies
-* Compile the code with `yarn build` or if you wanna build in watch mode `yarn start`
+* Compile the code with `yarn build` or if you want to build in watch mode `yarn start`
 * Then you can make any changes on `src`
-* Tests your changes in `__tests__`
+* Test your changes in `__tests__`
 
 
 
