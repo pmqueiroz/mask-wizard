@@ -1,5 +1,4 @@
-const genericMask = (mask: String, val: String): String => {
-    console.log(mask + ' , ' + val);
+const genericMask = (mask: string, val: string): string => {
     if (!val || val === '') {
         return '';
     }
@@ -13,7 +12,6 @@ const genericMask = (mask: String, val: String): String => {
         default:
             return mask.charAt(0) + genericMask(mask.substring(1), val);
     }
-    return '';
 }
 
 export {genericMask};
